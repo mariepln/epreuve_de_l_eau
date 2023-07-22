@@ -4,6 +4,7 @@ import sys
 
 string = sys.argv[1]
 result = ""
+char_count = 0
 
 def upper_char(char):
     if 'a' <= char <= 'z':
@@ -16,12 +17,17 @@ def lower_char(char):
     return char
 
 for i in range(len(string)):
-    if i % 2 == 0: 
-        result += upper_char(string[i])
+    if string[i] != ' ':
+        if char_count % 2 == 0: 
+            result += upper_char(string[i])
+        else:
+            result += lower_char(string[i])
+        char_count += 1
     else:
-        result += lower_char(string[i])
+        result += ' '
 
 print(result)
+
 
 
     
