@@ -2,14 +2,27 @@
 
 import sys
 
-arg_premier = int(sys.argv[1])
-arg_second = int(sys.argv[2])
+def min_max_numbers():
+    first_arg = int(sys.argv[1])
+    second_arg = int(sys.argv[2])
+    if first_arg < second_arg:
+        for i in range (first_arg, second_arg):
+            print(i, end=" ")
+    else:
+        for i in range (second_arg, first_arg):
+            print(i, end=" ")
 
-if arg_premier < arg_second:
-    for i in range (arg_premier, arg_second):
-        print(i, end=" ")
-else:
-    for i in range (arg_second, arg_premier):
-        print(i, end=" ")
+    print("")
 
-print("")
+if len(sys.argv) < 2:
+    print("error")
+    sys.exit(1)
+
+try:
+    first_arg = int(sys.argv[1])
+    second_arg = int(sys.argv[2])
+except ValueError:
+    print("error")
+    sys.exit(1)
+
+min_max_numbers()

@@ -8,9 +8,9 @@ try:
     second_arg = str(sys.argv[2])
 
     def search_arg(second_arg, first_arg):
-        second_len = len(second_arg)
         first_len = len(first_arg)
-
+        second_len = len(second_arg)
+    
         for i in range(first_len - second_len + 1):
             similar_string = True
             for j in range(second_len):
@@ -18,8 +18,7 @@ try:
                     similar_string = False
                     break
             if similar_string:
-                return True
-        
+                return True 
         return False
 
     result = search_arg(second_arg, first_arg)

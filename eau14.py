@@ -2,8 +2,6 @@
 
 import sys
 
-arg_list = sys.argv[1:]
-
 def my_ascii_sort(arg_list):
     for i in range(len(arg_list)):
         min_index = i
@@ -21,6 +19,11 @@ def my_ascii_sort(arg_list):
         arg_list[i], arg_list[min_index] = arg_list[min_index], arg_list[i]
     return arg_list
 
+if len(sys.argv) < 2:
+    print("error")
+    sys.exit(1)
 
-new_arg_list = my_ascii_sort(arg_list)
+arguments = sys.argv[1:]
+
+new_arg_list = my_ascii_sort(arguments)
 print (' '.join(new_arg_list))
