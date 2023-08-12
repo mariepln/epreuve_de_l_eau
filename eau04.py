@@ -27,7 +27,6 @@ if input_number < 0:
     print("-1")
     sys.exit(1)
 
-
 next_prime = find_next_prime(input_number)
 print(next_prime)
 
