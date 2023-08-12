@@ -2,6 +2,9 @@
 
 import sys
 
+#parcourir les paires possibles de nombres
+#calculer les différences absolues, les comparer
+#trouver la plus petite
 def find_min_abs(numbers_list):
     min_abs = abs(numbers_list[0] - numbers_list[1])
     for x in range(len(numbers_list)):
