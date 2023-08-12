@@ -2,13 +2,11 @@
 
 import sys
 
-def find_min_abs ():
-    difference = numbers_list[0] - numbers_list[1]
-    min_abs = -difference if difference < 0 else difference
+def find_min_abs(numbers_list):
+    min_abs = abs(numbers_list[0] - numbers_list[1])
     for x in range(len(numbers_list)):
         for j in range(x+1, len(numbers_list)):
-            difference = numbers_list[x] - numbers_list[j]
-            abs_value = -difference if difference < 0 else difference
+            abs_value = abs(numbers_list[x] - numbers_list[j])
             if abs_value < min_abs:
                 min_abs = abs_value
     return min_abs
@@ -21,6 +19,8 @@ if len(numbers_list) < 2:
 
 result = find_min_abs()
 print(result)
+
+
             
 
 

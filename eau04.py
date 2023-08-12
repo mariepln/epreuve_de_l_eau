@@ -3,14 +3,14 @@
 import sys
 
 #fonctions utilisées
-def is_prime(num):
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
+def is_prime(number):
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
             return False
     return True
 
-def find_next_prime(start):
-    n = start + 1
+def find_next_prime(start_number):
+    n = start_number + 1
     while not is_prime(n):
         n += 1
     return n
