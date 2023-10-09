@@ -15,15 +15,17 @@ def find_next_prime(start_number):
         n += 1
     return n
 
-#parsing
-input_number = int(sys.argv[1])
-
-#gestion d'erreur
-if len(sys.argv) < 2:
-    print("-1")
+#parsing et gestion d'erreur
+try:
+    input_number = int(sys.argv[1])
+    if input_number < 0:
+        print("-1")
+        sys.exit(1)
+except ValueError:
+    print("error")
     sys.exit(1)
 
-if input_number < 0:
+if len(sys.argv) < 2:
     print("-1")
     sys.exit(1)
 
